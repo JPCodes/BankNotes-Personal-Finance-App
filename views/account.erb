@@ -62,7 +62,7 @@
         <% @accounts.each() do |account| %>
         <tr>
           <td><%= account.name() %></td>
-          <td><%= account.balance() %></td>
+          <td>$<%= account.balance() %></td>
           <td><a href='/user_account/<%= account.id %>' class="submit-with-icon blue-link"><i class="material-icons">change_history</i></a></td>
           <form action='/user_account' method='post'>
             <input type="hidden" name="account_id" value="<%= account.id %>">

@@ -23,8 +23,8 @@
         <input type="text" id="budget_amount" name="budget_amount" placeholder="Enter Budget Amount">
         <label for="type_of_budget">Type of Budget</label>
         <select class="browser-default" id="type_of_budget" name="type_of_budget">
-          <option value="monthly">Monthly</option>
-          <option value="yearly">Yearly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="Yearly">Yearly</option>
         </select>
         <br>
         <button type="submit" class="btn">Add Budget</button>
@@ -70,8 +70,8 @@
           <% @user.budgets.each do |budget| %>
           <tr>
             <td><a href="/budget/<%= budget.id %>" class="blue-link"><%= budget.name %></a></td>
-            <td>$<%= budget.amount %>0</td>
-            <td>$<%= budget.current_amount %>0</td>
+            <td>$<%= budget.amount %></td>
+            <td>$<%= budget.current_amount %></td>
             <td><%= budget.type_of_budget %></td>
             <td><button class="submit-with-icon" type="submit"><a href="/budget/<%= budget.id %>"><i type="submit" class="material-icons blue-link">change_history</i></a></button></td>
             <form action='/user_budget' method='post'>
